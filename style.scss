@@ -1,0 +1,148 @@
+$active-color: hsl(14, 88%, 65%);
+$bold-color: hsl(238, 29%, 16%);
+$primary-color: hsl(237, 12%, 33%);
+$primary-weight: 700;
+$secondary-color:  hsl(240, 6%, 50%);
+$secondary-weight: 500;
+$font-size: 12px;
+$dividers: hsl(240, 5%, 91%);
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline:none;
+}
+
+body {
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height:100vh;
+    background-size: cover;
+    color: $primary-color;
+    font-family: 'Kumbh Sans', sans-serif; 
+    font-size: 12px;
+}
+
+h1 {
+    margin: 50px 30px 30px 20px;
+    font-weight: $primary-weight;
+    font-size: 2.5em;
+}
+
+
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 65%;
+    height: 65%;
+    border-radius: 25px;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 25px 55px 0;
+    
+    .card-images {
+        position: relative;
+        overflow: hidden;
+
+        .bg-pattern {
+            position: absolute;
+            width: 55rem;
+            height: 55rem;
+            top: -275px;
+            left: -500px;
+        }
+    
+        .woman-online {
+            position: absolute;
+            top: 50px;
+            left: -85px;
+        }
+    
+        .illustration-box {
+            position: fixed;
+            left: -93px;
+            top: 185px;
+    
+        }
+    }
+
+    .mobile-images {
+        display: none;
+    }
+
+    .collapsible-container {
+        border-bottom: 1px solid $dividers;
+        margin-left: 20px;
+        padding: 5px 0 5px 0;
+        max-width: 75%;
+    }
+
+    .collapsible {
+        color: $primary-color;
+        background-color: white;
+        border: none;
+        padding: 10px 10px 10px 0px;
+        text-decoration: none;
+        cursor: pointer;
+
+        .arrow{
+            position: absolute;
+            right: 12%;
+        }
+    }
+
+    .collapsible:hover {
+        color: $active-color;
+    }
+
+    .content {
+        color: $secondary-color;
+        overflow: hidden;
+        display:none;
+        padding: 0px 0px 10px 0px;
+        line-height: 17px;
+     }
+}
+
+
+@media screen and (max-width: 568px) {
+    .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 550px;
+        height: auto;
+
+        .desktop-images {
+            display: none;
+        }
+
+        .mobile-images {
+            display: block;
+        }
+
+        .bg-pattern-mobile {
+            position: relative;
+            left: 14%;
+          
+        }
+
+        .woman-online-mobile {
+           position: fixed;
+           top: -108px;
+           left: 5%;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+    }
+}

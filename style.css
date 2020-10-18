@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  height: 100vh;
+  background-size: cover;
+  color: #4a4b5e;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 50px 30px 30px 20px;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 65%;
+  height: 65%;
+  border-radius: 25px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 25px 55px 0;
+}
+.container .card-images {
+  position: relative;
+  overflow: hidden;
+}
+.container .card-images .bg-pattern {
+  position: absolute;
+  width: 55rem;
+  height: 55rem;
+  top: -275px;
+  left: -500px;
+}
+.container .card-images .woman-online {
+  position: absolute;
+  top: 50px;
+  left: -85px;
+}
+.container .card-images .illustration-box {
+  position: fixed;
+  left: -93px;
+  top: 185px;
+}
+.container .mobile-images {
+  display: none;
+}
+.container .collapsible-container {
+  border-bottom: 1px solid #e7e7e9;
+  margin-left: 20px;
+  padding: 5px 0 5px 0;
+  max-width: 75%;
+}
+.container .collapsible {
+  color: #4a4b5e;
+  background-color: white;
+  border: none;
+  padding: 10px 10px 10px 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container .collapsible .arrow {
+  position: absolute;
+  right: 12%;
+}
+.container .collapsible:hover {
+  color: #f47c57;
+}
+.container .content {
+  color: #787887;
+  overflow: hidden;
+  display: none;
+  padding: 0px 0px 10px 0px;
+  line-height: 17px;
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 550px;
+    height: auto;
+  }
+  .container .desktop-images {
+    display: none;
+  }
+  .container .mobile-images {
+    display: block;
+  }
+  .container .bg-pattern-mobile {
+    position: relative;
+    left: 14%;
+  }
+  .container .woman-online-mobile {
+    position: fixed;
+    top: -108px;
+    left: 5%;
+  }
+  .container .content {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
